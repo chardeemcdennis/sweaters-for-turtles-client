@@ -2,7 +2,7 @@
 
 const app = require('../app');
 
-const signUp = function (data) {
+const signUp = (data) => {
   return $.ajax({
     url: app.host + '/sign-up',
     method: 'POST',
@@ -10,7 +10,7 @@ const signUp = function (data) {
   });
 };
 
-const signIn = function (data) {
+const signIn = (data) => {
   return $.ajax({
     url: app.host + '/sign-in',
     method: 'POST',
@@ -18,9 +18,9 @@ const signIn = function (data) {
   });
 };
 
-const changePassword = function (data) {
+const changePassword = (data) => {
   return $.ajax({
-    url: app.host + '/change-password/' + app.user.id,
+    url: app.host + '/change-password/' + app.user._id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + app.user.token,
@@ -29,9 +29,9 @@ const changePassword = function (data) {
   });
 };
 
-const signOut = function () {
+const signOut = () => {
   return $.ajax({
-    url: app.host + '/sign-out/' + app.user.id,
+    url: app.host + '/sign-out/' + app.user._id,
     method: 'DELETE',
     headers: {
         Authorization: 'Token token=' + app.user.token,
