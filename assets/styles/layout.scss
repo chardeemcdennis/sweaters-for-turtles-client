@@ -3,11 +3,15 @@ $header-box-height: 60px;
 
 html {
   height: 100%;
-  overflow: hidden;
 }
 
 body {
   padding-top: 2px;
+}
+
+.container-fluid {
+  margin: 0;
+  padding: 0;
 }
 
 p {
@@ -68,6 +72,11 @@ hr {
   width: 100%;
 }
 
+.container {
+  padding: 0;
+  width: 100%;
+}
+
 .sign-in-alert-danger {
   float: right;
 }
@@ -93,8 +102,8 @@ hr {
 
 // STYLING FOR FOOTER AND ITS CONTENTS
 footer {
-  bottom: 0;
-  position: fixed;
+  margin-top: 670px;
+  text-align: center;
 }
 
 .credit {

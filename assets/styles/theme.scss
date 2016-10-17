@@ -26,6 +26,28 @@ a:hover {
   font-size: 30px;
 }
 
+// Set hero background image
+.hero {
+  background-image: url('../images/stegosaurus.jpg');
+  background-position: 0 60%;
+  background-size: cover;
+  height: 550px;
+  width: 100%;
+}
+
+.content {
+  padding: 50px, 100px;
+}
+
+.row-fluid {
+  clear: both;
+  text-align: center;
+}
+
+.how-sft-works {
+  margin-top: 75px;
+}
+
 // Should break into class for new rounds, login and create profile
 
 input {
