@@ -21,13 +21,16 @@ const onSignIn = (event) => {
   event.preventDefault();
   let data = getFormFields(event.target);
   // $('#sign-in-warning').hide();
-  
+
   api.signIn(data)
     .done(ui.signInSuccess)
     .fail(ui.signInFailure);
 };
 
 //
+const onChangePasswordClick = function () {
+  ui.showChangePassword();
+};
 
 const onChangePassword = (event) => {
   event.preventDefault();
@@ -49,6 +52,7 @@ const addHandlers = function() {
   $('#sign-up-link').on('click', onSignUpClick);
   $('#sign-up').on('submit', onSignUp);
   $('#sign-in').on('submit', onSignIn);
+  $('#change-password-btn').on('click', onChangePasswordClick);
   $('#change-password').on('submit', onChangePassword);
   $('#sign-out').on('submit', onSignOut);
 };

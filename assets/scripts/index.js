@@ -13,4 +13,7 @@ $(() => {
   orderEvents.addHandlers();
   productEvents.addHandlers();
   profileEvents.addHandlers();
+
+  $('#user-welcome').hide();
+  $('#sign-in-failure').hide();
 });

@@ -13,13 +13,16 @@
             defer></script>
     </head>
     <body class="container-fluid">
+      <div class="main-wrapper">
       <header>
-        <h1>Sweaters for turtles</h1>
+        <h1 class = 'title'>Sweaters for turtles</h1>
         <div class='header-box'>
           <div id="sign-in-prompt" class = "sign-in-prompt">
             <form id="sign-in">
               <fieldset>
-                <input type="email" name="credentials[email]" placeholder="Email">
+                <input type="email"
+                       name="credentials[email]"
+                       placeholder="Email">
                 <br>
                 <input type="password" name="credentials[password]"
                 placeholder="Password">
@@ -49,7 +52,6 @@
                 aria-labelledby="dropdownMenu1">
               <li><a id="edit-profile-btn">Edit Profile</a></li>
               <li><a id='change-password-btn'>Change Password</a></li>
-              <li><a id='change-profile-btn'>Change Profile</a></li>
               <li role="separator" class="divider"><!----></li>
               <li class='sign-out-li'>
                 <form id="sign-out" class='sign-out-btn'>
@@ -108,10 +110,51 @@
           </div>
         </div>
       </div>
+      <div class="modal fade" id="changePasswordModal" tabindex="-1"
+      role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title" id="myModalLabel">Change Password</h4>
+            </div>
+            <div class="modal-body">
+              <form id="change-password">
+                <fieldset>
+                  <input type="password" name="passwords[old]"
+                  placeholder="Current Password">
+                  <input type="password" name="passwords[new]"
+                  placeholder="New Password">
+                  <input type="submit" value="Submit Changes">
+                </fieldset>
+              </form>
+              <!--SUCCESS MESSAGE SHOWS ON SUBMIT-->
+              <h3 id='pwd-change-msg'>Password Successfully Changed</h3>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <hr>
+    <div class="container">
+      <div
+        id="sign-in-failure"
+        class="alert alert-danger sign-in-alert-danger"
+        role="alert">
+          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true">
+          <!----></span>
+          <span class="sr-only">Error:</span>
+          The email or password you entered is incorrect.
+      </div>
+    </div>
 
 
-
+    </div>
     </body>
 </html>

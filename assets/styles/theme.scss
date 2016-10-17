@@ -1,0 +1,38 @@
+@import 'colors';
+
+$background-color: $off-white;
+
+hr {
+  border: 1px solid $black;
+}
+
+//Change hover icon from highlight bar to mouse or finger for anchors
+a:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.alert-link {
+  text-decoration: underline;
+}
+
+.alert-link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+// Enlarges X out button for modals
+.close {
+  font-size: 30px;
+}
+
+// Should break into class for new rounds, login and create profile
+
+input {
+  margin: 1px 0;
+}
+
+// Commented out credit in HTML
+.credit {
+  padding: 2px;
+}

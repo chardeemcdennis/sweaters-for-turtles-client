@@ -19,15 +19,16 @@ const signInSuccess = (data) => {
   app.user = data.user;
 
   //UI response to sign in
+  $('#user-name-welcome').html(app.user.email);
   $('#sign-in-prompt').hide();
   $('#sign-in-failure').hide();
+  $('#user-welcome').show();
 };
 
-// Has no html
-// const signInFailure = (error) => {
-//   $('#sign-in-failure').show();
-//   return error;
-// };
+const signInFailure = (error) => {
+  $('#sign-in-failure').show();
+  return error;
+};
 
 //
 //SIGN OUT
@@ -48,11 +49,12 @@ const showChangePassword = function () {
   $('#change-password').show();
 };
 
-//change password
-// const changePasswordSuccess = () => {
-//   $('#change-password').hide();
-//   $('#pwd-change-msg').show();
-// };
+// change password
+const changePasswordSuccess = () => {
+  $('#change-password').hide();
+  $('#pwd-change-msg').show();
+  $('#changePasswordModal').modal('hide');
+};
 
 const changePasswordFailure = (error) => {
   return error;
@@ -68,11 +70,11 @@ module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
-  // signInFailure,
+  signInFailure,
   signOutSuccess,
   signOutFailure,
   showChangePassword,
-  // changePasswordSuccess,
+  changePasswordSuccess,
   changePasswordFailure,
   showSignUpModal,
 };
