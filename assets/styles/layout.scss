@@ -1,5 +1,5 @@
 $header-margin: 15px;
-$header-box-height: 60px;
+$header-box-height: 65px;
 
 html {
   height: 100%;
@@ -18,9 +18,21 @@ p {
   margin: 0;
 }
 
-.title {
+.title-section {
   float: left;
-  margin: 20px 0 0 $header-margin;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.title {
+  margin: inherit;
+  margin-left: 4px;
+}
+
+.sub-title {
+  clear: left;
+  float: left;
+  margin: 0 0 0 $header-margin;
 }
 
 .header-box {
@@ -102,6 +114,7 @@ hr {
 
 // STYLING FOR FOOTER AND ITS CONTENTS
 footer {
+  margin-bottom: 5px;
   margin-top: 670px;
   text-align: center;
 }

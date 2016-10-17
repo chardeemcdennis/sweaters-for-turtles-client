@@ -2,64 +2,26 @@
 @import 'layout';
 @import 'typography';
 
-$tiny-font: 12.2vw;
+$tiny-font: 5.2vw;
 
-html {
-  @include breakpoint(large) {
-    height: 470px;
-  }
-}
-
-.title {
-  @include breakpoint(tiny) {
-    font-size: $tiny-font;
-    margin-left: 4px;
-    margin-top: 7.5px;
-  }
-
-  @include breakpoint(x-small) {
-    font-size: $title-size * .94;
-    margin: inherit;
-    margin-left: 4px;
-  }
-
-  @include breakpoint(small) {
-    font-size: $title-size;
-    margin: inherit;
-    margin-left: 4px;
-  }
-
-  @include breakpoint(medium) {
-    font-size: $title-size;
-    margin: inherit;
-    margin-left: 4px;
-  }
-
-  @include breakpoint(large) {
-    font-size: $title-size;
-    margin: inherit;
-    margin-left: 4px;
-  }
-}
-
-.credit {
-  @include breakpoint(tiny) {
-    font-size: ($credit-size * .75);
-  }
-
-  @include breakpoint(x-small) {
-    font-size: ($credit-size * .75);
-  }
-
-  @include breakpoint(small) {
-    font-size: ($credit-size * .75);
-  }
-
-  @include breakpoint(medium) {
-    font-size: $credit-size * .95;
-  }
-
-  @include breakpoint(large) {
-    font-size: $credit-size;
-  }
-}
+// .title {
+//   @include breakpoint(tiny) {
+//     font-size: $tiny-font;
+//   }
+//
+//   @include breakpoint(x-small) {
+//     font-size: $title-size * .94;
+//   }
+//
+//   @include breakpoint(small) {
+//     font-size: $title-size;
+//   }
+//
+//   @include breakpoint(medium) {
+//     font-size: $title-size;
+//   }
+//
+//   @include breakpoint(large) {
+//     font-size: $title-size;
+//   }
+// }

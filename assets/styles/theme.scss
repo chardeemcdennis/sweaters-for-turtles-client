@@ -2,7 +2,11 @@
 
 $background-color: $off-white;
 
-hr {
+.nav-top {
+  border: .5pt solid $black;
+}
+
+.header-below {
   border: 1px solid $black;
 }
 
@@ -21,6 +25,11 @@ a:hover {
   text-decoration: underline;
 }
 
+.navbar {
+  height: 20px;
+  margin: 0;
+}
+
 // Enlarges X out button for modals
 .close {
   font-size: 30px;
@@ -31,7 +40,7 @@ a:hover {
   background-image: url('../images/stegosaurus.jpg');
   background-position: 0 60%;
   background-size: cover;
-  height: 550px;
+  height: 450px;
   width: 100%;
 }
 

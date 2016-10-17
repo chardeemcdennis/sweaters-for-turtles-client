@@ -1,46 +1,59 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>sweatersforturtles</title>
+  <head>
+    <title>sweatersforturtles</title>
 
-      <script src="vendor.bundle.js"
-            type="text/javascript"
-            charset="utf-8"
-            defer></script>
-      <script src="bundle.js"
-            type="text/javascript"
-            charset="utf-8"
-            defer></script>
-    </head>
-    <body class="container-fluid">
-      <div class="main-wrapper">
-      <header>
-        <h1 class = 'title'>Sweaters for turtles</h1>
-        <div class='header-box'>
-          <div id="sign-in-prompt" class = "sign-in-prompt">
-            <form id="sign-in">
-              <fieldset>
-                <input type="email"
-                       name="credentials[email]"
-                       placeholder="Email">
-                <br>
-                <input type="password" name="credentials[password]"
-                placeholder="Password">
-                <input type="submit" value="Sign In">
-              </fieldset>
-            </form>
-            <p class="new-user-text">
-              New user? <a id="sign-up-link" class="sign-up-link">
-                Click here</a> to sign-up now!
-            </p>
-          </div>
+    <script src="vendor.bundle.js"
+          type="text/javascript"
+          charset="utf-8"
+          defer></script>
+    <script src="bundle.js"
+          type="text/javascript"
+          charset="utf-8"
+          defer>
+    </script>
+      <link
+      href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Rubik|VT323"
+      rel="stylesheet">
+  </head>
+  <body class="container-fluid">
+  <div class="main-wrapper">
+    <header>
+      <div class = 'title-section'>
+        <h1 class = 'title'>Sweaters for Turtles</h1>
+        <h5 class = 'sub-title'>A Nozama Company</h5>
+      </div>
+      <!-- END SUBHEADER -->
+
+      <!-- WELCOME BOX -->
+      <div class='header-box'>
+        <div id="sign-in-prompt" class = "sign-in-prompt">
+          <form id="sign-in">
+            <fieldset>
+              <input type="email"
+                     name="credentials[email]"
+                     placeholder="Email">
+              <br>
+              <input type="password" name="credentials[password]"
+              placeholder="Password">
+              <input type="submit" value="Sign In">
+            </fieldset>
+          </form>
+          <p class="new-user-text">
+            New user? <a id="sign-up-link" class="sign-up-link">
+              Click here</a> to sign-up now!
+          </p>
+        </div>
 
 
-<!-- Initially hidden -->
+        <!-- (Initially hidden) WELCOME MESSAGE -->
         <div class='user-welcome' id="user-welcome">
           <h4 class="welcome-msg"> Hi,
             <span id="user-name-welcome" class="user-name-welcome"></span>
           </h4>
+          <!-- END WELCOME MESSAGE -->
+
+          <!-- SETTINGS DROP DOWN  -->
           <div class="dropdown">
             <button class="btn btn-default btn-lg dropdown-toggle cog-btn"
                     type="button" id="cogMenu" data-toggle="dropdown"
@@ -71,10 +84,11 @@
           </div>
           Settings
         </div>
+        <!-- END SETTINGS DROP DOWN  -->
       </div>
+      <!-- END WELCOME BOX -->
 
-      <!-- Initially hidden-->
-      <!--  Sign Up Modal -->
+      <!--  (Initially hidden) SIGN UP MODAL -->
       <div class="modal fade" id="signUpModal"
            tabindex="-1" role="dialog"
            aria-labelledby="myModalLabel">
@@ -110,6 +124,10 @@
           </div>
         </div>
       </div>
+      <!-- END SIGN UP MODAL -->
+
+      <!-- (Initially Hidden) CHANGE PASSWORD MODAL -->
+      <!-- WILL BE INCORPORATED INTO VIEW PROFILE LATER -->
       <div class="modal fade" id="changePasswordModal" tabindex="-1"
       role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -140,8 +158,17 @@
           </div>
         </div>
       </div>
+      <!-- END CHANGE PASSWORD MODAL -->
+      <hr class='nav-top'>
+
+      <!-- START NAVBAR -->
+      <nav class='navbar'>
+      </nav>
+      <!-- END NAVBAR -->
     </header>
-    <hr>
+    <hr class='header-below'>
+
+
     <div class="container">
       <div class='notifications'>
         <div
@@ -154,40 +181,42 @@
             The email or password you entered is incorrect.
         </div>
       </div>
-      <div class='hero'>
-      </div>
-      <div class='content'>
-        <div class="row-fluid">
-          <div class='col-md-1'>
-          </div>
-          <div class='col-md-3 how-sft-works'>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          </div>
-          <div class='col-md-3 how-sft-works'>
-            <p>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.
-            </p>
-          </div>
-          <div class='col-md-3 how-sft-works'>
-            <p>
-              Reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-            </p>
-          </div>
-          <div class='col-md-1'>
+      <div class='home-view'>
+        <div class='hero'>
+        </div>
+        <div class='content'>
+          <div class="row-fluid">
+            <div class='col-md-1'>
+            </div>
+            <div class='col-md-3 how-sft-works'>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+            <div class='col-md-3 how-sft-works'>
+              <p>
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.
+              </p>
+            </div>
+            <div class='col-md-3 how-sft-works'>
+              <p>
+                Reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+              </p>
+            </div>
+            <div class='col-md-1'>
+            </div>
           </div>
         </div>
       </div>
-      </div>
-      <footer>
-        <p>
-          Copyright 2016 Sweaters for Turtles
-        </p>
-      </footer>
     </div>
-    </body>
+    <footer>
+      <p>
+        &#169; 2016 Sweaters for Turtles
+      </p>
+    </footer>
+  </div>
+  </body>
 </html>
