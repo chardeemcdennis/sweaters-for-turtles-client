@@ -2,6 +2,8 @@
 
 const app = require('../app');
 const signedIn = require('../templates/signed-in.handlebars');
+// const productsEvents = require('../products/events');
+
 
 //SIGN UP
 const signUpSuccess = () => {
@@ -25,6 +27,7 @@ const signInSuccess = (data) => {
   $('#sign-in-failure').hide();
   $('#user-welcome').show();
   $('nav').html(signedIn());
+  // productsEvents.onDisplayProducts();
 };
 
 const signInFailure = (error) => {

@@ -1,10 +1,12 @@
 <h1> Turtle Sweaters: </h1>
 {{#each products}}
   <h3>{{name}}</h3>
-  <p>{{price}}
+  <p>
+  {{_id}}
+  {{price}}
   {{description}}
   {{size}}</p>
   <img src="https://squirrelpicnic.files.wordpress.com/2013/05/myrtle-in-a-bowser-sweater.jpg" alt="https://squirrelpicnic.files.wordpress.com/2013/05/myrtle-in-a-bowser-sweater.jpg" height="142" width="142">
-  <button id={{add-to-card}} class="btn btn-default display-edit-review">Add to Cart</button>
+  <button id={{_id}} class="btn btn-default display-edit-review add-to-cart">Add to Cart</button>
 
 {{/each}}
