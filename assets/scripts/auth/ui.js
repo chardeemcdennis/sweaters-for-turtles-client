@@ -1,6 +1,7 @@
 'use strict';
 
 const app = require('../app');
+const signedIn = require('../templates/signed-in.handlebars');
 
 //SIGN UP
 const signUpSuccess = () => {
@@ -23,6 +24,7 @@ const signInSuccess = (data) => {
   $('#sign-in-prompt').hide();
   $('#sign-in-failure').hide();
   $('#user-welcome').show();
+  $('nav').html(signedIn());
 };
 
 const signInFailure = (error) => {
