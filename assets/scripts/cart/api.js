@@ -11,10 +11,22 @@ const addToCart = (product_id) => {
     headers: {
       Authorization: 'Token token=' + app.user.token,
     },
-    data: data,
+    data: {  "product" : data }
+  });
+};
+
+let displayCart = function(){
+  return $.ajax({
+    url: app.host + "/cart-show/" + app.user._id,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+    // data: data
   });
 };
 
 module.exports = {
-  addToCart
+  addToCart,
+  displayCart
 };

@@ -14,8 +14,17 @@ const onAddToCart = (event) => {
   .fail(ui.failure);
 };
 
+const onDisplayCart = (event) => {
+  event.preventDefault();
+  api.displayCart()
+  .done(ui.displayCartSuccess)
+  .fail(ui.failure);
+};
+
 const addHandlers = function() {
   $('.content').on('click','.add-to-cart', onAddToCart);
+  $('nav').on('click','#get-cart', onDisplayCart);
+
 };
 
 module.exports = {
