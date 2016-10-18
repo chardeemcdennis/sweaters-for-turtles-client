@@ -20,6 +20,7 @@ const signUpFailure = (error) => {
 const signInSuccess = (data) => {
   //Stores current user data into app.user
   app.user = data.user;
+  app.user.cart = data.user.cart;
 
   //UI response to sign in
   $('#user-name-welcome').html(app.user.email);
