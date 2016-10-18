@@ -1,6 +1,6 @@
 'use strict';
 
-const app = require('../app');
+// const app = require('../app');
 const displayProducts = require('../templates/display-products.handlebars');
 
 

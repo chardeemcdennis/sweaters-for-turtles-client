@@ -15,7 +15,7 @@ const addToCart = (product_id) => {
   });
 };
 
-let displayCart = function(){
+const displayCart = () => {
   return $.ajax({
     url: app.host + "/cart-show/" + app.user._id,
     method: 'GET',

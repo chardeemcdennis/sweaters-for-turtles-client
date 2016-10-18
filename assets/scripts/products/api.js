@@ -2,9 +2,9 @@
 
 const app = require('../app');
 
-let displayProducts = function(){
+const displayProducts = () => {
   return $.ajax({
-    url: app.host + "/products", // "http://book-json.herokuapp.com/books"
+    url: app.host + "/products",
     method: 'GET',
     headers: {
       // Authorization: 'Token token=' + app.user.token,
