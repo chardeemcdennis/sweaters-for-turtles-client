@@ -4,8 +4,8 @@ const app = require('../app');
 
 const displayCart = require('../templates/display-cart.handlebars');
 
-const displayCartSuccess = (products) => {
-  $('#content').html(displayCart(products));
+const displayCartSuccess = (cart) => {
+  $('#content').html(displayCart(cart));
 };
 
 module.exports = {
