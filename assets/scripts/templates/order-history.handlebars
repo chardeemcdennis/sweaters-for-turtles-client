@@ -1,8 +1,10 @@
 <h1> Orders: </h1>
+<button id={{_id}} class="deleteOrder">Delete This Order</button>
 {{#each orders}}
 
-  <p>
+  <div class="showOrder">
   <strong>Order Id:</strong>{{order}}
-  </p>
+  <button id={{_id}} class="deleteOrder">Delete This Order</button>
+</div>
 
 {{/each}}
