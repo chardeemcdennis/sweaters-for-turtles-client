@@ -11,18 +11,18 @@ Products in My Cart:
 <h3>Total Amount: </h3>h3>
 </div>
 
-<div class="stripeCheckout">
-  <form action="/checkout" method="POST">
+<form action="http://localhost:3000/examples" method="POST">
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="pk_test_TmOEajfRUrzDTQ37AIJ1A7hp"
-    data-amount="2000"
+    data-amount="999"
     data-name="Sweaters for Turtles"
-    data-description="2 widgets"
+    data-description="Widget"
     data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
     data-locale="auto">
   </script>
-  </form>
-</div>
+</form>
+
+<button id="stripeCheckout">Checkout with Stripe</button>
 
 <button class ="clearCartButton">Clear Cart</button>

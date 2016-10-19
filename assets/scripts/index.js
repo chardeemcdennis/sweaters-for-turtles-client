@@ -13,6 +13,7 @@ $(() => {
   orderEvents.addHandlers();
   productEvents.addHandlers();
   profileEvents.addHandlers();
+  StripeCheckout.configure();
 
   $('#user-welcome').hide();
   $('#sign-in-failure').hide();
