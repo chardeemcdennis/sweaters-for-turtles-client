@@ -2,15 +2,17 @@
 
 const api = require('./api');
 const ui = require('./ui');
+const getFormFields = require('../../../lib/get-form-fields.js');
 
 const onAddToCart = (event) => {
   event.preventDefault();
-  let product_id = event.target.id;
+  let data = getFormFields(event.target);
+  console.log('getformfields data is', data);
   // let data = document.getElementById("price");
   // console.log(data);
   // let price = data;
   // console.log(price);
-  api.addToCart(product_id)
+  api.addToCart(data)
     .done(ui.addToCartSuccess)
     .fail(ui.failure);
 };
@@ -30,7 +32,7 @@ const onClearCart = (event) => {
 };
 
 const addHandlers = () => {
-  $('.content').on('click', '.add-to-cart', onAddToCart);
+  $('.content').on('submit', '.add-to-cart', onAddToCart);
   $('nav').on('click', '#get-cart', onDisplayCart);
   $('.content').on('click', '.clearCartButton', onClearCart);
 };

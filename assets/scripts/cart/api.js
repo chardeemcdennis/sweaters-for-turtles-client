@@ -2,16 +2,15 @@
 
 const app = require('../app');
 
-const addToCart = (product_id) => {
-  let data = product_id;
-  // console.log(review_id);
+const addToCart = (data) => {
+  console.log('app.user is', app.user);
   return $.ajax({
     url: app.host + '/cart-update/' + app.user._id,
     method: "PATCH",
     headers: {
       Authorization: 'Token token=' + app.user.token,
     },
-    data: {  "product" : data }
+    data: data
   });
 };
 
