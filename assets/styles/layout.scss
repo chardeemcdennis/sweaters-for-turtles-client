@@ -1,0 +1,124 @@
+$header-margin: 15px;
+$header-box-height: 65px;
+
+html {
+  height: 100%;
+}
+
+body {
+  padding-top: 2px;
+}
+
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.title-section {
+  float: left;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.title {
+  margin: inherit;
+  margin-left: 4px;
+}
+
+.sub-title {
+  clear: left;
+  float: left;
+  margin: 0 0 0 $header-margin;
+}
+
+.header-box {
+  align-items: flex-end;
+  display: flex;
+  float: right;
+  height: $header-box-height;
+  margin-right: $header-margin;
+  margin-top: $header-margin;
+}
+
+.sign-in-prompt {
+  margin-top: 3px;
+}
+
+.user-welcome {
+  align-items: center;
+  display: flex;
+  float: right;
+  margin-right: ($header-margin * 1.5);
+  margin-top: $header-margin;
+}
+
+.welcome-msg {
+  float: left;
+  margin: auto 5px;
+}
+
+// Settings icon
+.cog-btn {
+  margin: 3px;
+  padding: 0;
+}
+
+.glyphicon-cog {
+  margin: 0;
+  padding: 3px 3px 1px 4px;
+}
+// END settings icon
+
+.dropdown-menu {
+  text-align: center;
+}
+
+hr {
+  clear: both;
+  margin: 0;
+  position: static;
+  width: 100%;
+}
+
+.container {
+  padding: 0;
+  width: 100%;
+}
+
+.sign-in-alert-danger {
+  float: right;
+}
+
+.no-sign-in-alert-danger {
+  margin: 5px auto;
+  width: 460px;
+}
+
+.btn-text {
+  clear: both;
+  margin: 10px 5px;
+  text-align: center;
+}
+
+// Set top margin for all modals
+.modal {
+  margin-top: 25vh;
+}
+
+
+
+
+// STYLING FOR FOOTER AND ITS CONTENTS
+footer {
+  margin-bottom: 5px;
+  margin-top: 670px;
+  text-align: center;
+}
+
+.credit {
+  margin: 0;
+}

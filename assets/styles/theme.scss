@@ -1,0 +1,89 @@
+@import 'colors';
+
+$background-color: $off-white;
+
+.nav-top {
+  border: .5pt solid $black;
+}
+
+.header-below {
+  border: 1px solid $black;
+}
+
+//Change hover icon from highlight bar to mouse or finger for anchors
+a:hover {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.alert-link {
+  text-decoration: underline;
+}
+
+.alert-link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.navbar {
+  height: 20px;
+  margin: 0;
+}
+
+// Enlarges X out button for modals
+.close {
+  font-size: 30px;
+}
+
+// Set hero background image
+.hero {
+  background-image: url('../images/turtle-sweaters/stegosaurus.jpg');
+  background-position: 0 60%;
+  background-size: cover;
+  height: 450px;
+  width: 100%;
+}
+
+.content {
+  padding: 50px 100px;
+}
+
+.product {
+  border: 1px solid $grey;
+  margin: 25px 40px;
+  padding: 0;
+}
+
+.image {
+  clear: both;
+  float: left;
+}
+
+// .h3 {
+//   float: right;
+// }
+
+// .price {
+//   float: right;
+// }
+
+
+.row-fluid {
+  clear: both;
+  text-align: center;
+}
+
+.how-sft-works {
+  margin-top: 75px;
+}
+
+// Should break into class for new rounds, login and create profile
+
+input {
+  margin: 1px 0;
+}
+
+// Commented out credit in HTML
+.credit {
+  padding: 2px;
+}

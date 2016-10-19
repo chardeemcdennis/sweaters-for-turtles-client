@@ -1,7 +1,19 @@
 'use strict';
 
-// user require with a reference to bundle the file and use it in this file
-// var example = require('./example');
+const authEvents = require('./auth/events');
+const cartEvents = require('./cart/events');
+const orderEvents = require('./orders/events');
+const productEvents = require('./products/events');
+const profileEvents = require('./profile/events');
 
-// use require without a reference to ensure a file is bundled
-require('./example');
+
+$(() => {
+  authEvents.addHandlers();
+  cartEvents.addHandlers();
+  orderEvents.addHandlers();
+  productEvents.addHandlers();
+  profileEvents.addHandlers();
+
+  $('#user-welcome').hide();
+  $('#sign-in-failure').hide();
+});

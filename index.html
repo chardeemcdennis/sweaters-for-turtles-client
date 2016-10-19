@@ -1,20 +1,182 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
 
-      <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body class="container-fluid">
-      <h1>Example</h1>
+<head>
+  <title>sweatersforturtles</title>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
-    </body>
+  <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="bundle.js" type="text/javascript" charset="utf-8" defer>
+  </script>
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Rubik|VT323" rel="stylesheet">
+</head>
+
+<body class="container-fluid">
+  <div class="main-wrapper">
+    <header>
+      <div class='title-section'>
+        <h1 class='title'>Sweaters for Turtles</h1>
+        <h5 class='sub-title'>A Nozama Company</h5>
+      </div>
+      <!-- END SUBHEADER -->
+
+      <!-- WELCOME BOX -->
+      <div class='header-box'>
+        <div id="sign-in-prompt" class="sign-in-prompt">
+          <form id="sign-in">
+            <fieldset>
+              <input type="email" name="credentials[email]" placeholder="Email">
+              <br>
+              <input type="password" name="credentials[password]" placeholder="Password">
+              <input type="submit" value="Sign In">
+            </fieldset>
+          </form>
+          <p class="new-user-text">
+            New user? <a id="sign-up-link" class="sign-up-link">
+              Click here</a> to sign-up now!
+          </p>
+        </div>
+
+
+        <!-- (Initially hidden) WELCOME MESSAGE -->
+        <div class='user-welcome' id="user-welcome">
+          <h4 class="welcome-msg"> Hi,
+            <span id="user-name-welcome" class="user-name-welcome"></span>
+          </h4>
+          <!-- END WELCOME MESSAGE -->
+
+          <!-- SETTINGS DROP DOWN  -->
+          <div class="dropdown">
+            <button class="btn btn-default btn-lg dropdown-toggle cog-btn" type="button" id="cogMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <span class="glyphicon glyphicon-cog" aria-hidden="true">
+                <!----></span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+              <li><a id='change-password-btn'>Change Password</a></li>
+              <li role="separator" class="divider">
+                <!---->
+              </li>
+              <li class='sign-out-li'>
+                <form id="sign-out" class='sign-out-btn'>
+                  <fieldset>
+                    <input type="submit" value="Sign Out">
+                  </fieldset>
+                </form>
+              </li>
+            </ul>
+          </div>
+          Settings
+        </div>
+        <!-- END SETTINGS DROP DOWN  -->
+      </div>
+      <!-- END WELCOME BOX -->
+
+      <!--  (Initially hidden) SIGN UP MODAL -->
+      <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
+            </div>
+            <div class="modal-body">
+              <form id="sign-up">
+                <fieldset>
+                  <input type="email" name="credentials[email]" placeholder="Email">
+                  <br>
+                  <input type="password" name="credentials[password]" placeholder="Password">
+                  <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+                  <input type="submit" value="Sign Up!">
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END SIGN UP MODAL -->
+
+      <!-- (Initially Hidden) CHANGE PASSWORD MODAL -->
+      <!-- WILL BE INCORPORATED INTO VIEW PROFILE LATER -->
+      <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h4 class="modal-title" id="myModalLabel">Change Password</h4>
+            </div>
+            <div class="modal-body">
+              <form id="change-password">
+                <fieldset>
+                  <input type="password" name="passwords[old]" placeholder="Current Password">
+                  <input type="password" name="passwords[new]" placeholder="New Password">
+                  <input type="submit" value="Submit Changes">
+                </fieldset>
+              </form>
+              <!--SUCCESS MESSAGE SHOWS ON SUBMIT-->
+              <h3 id='pwd-change-msg'>Password Successfully Changed</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- END CHANGE PASSWORD MODAL -->
+      <hr class='nav-top'>
+
+      <!-- START NAVBAR -->
+      <nav class='navbar'>
+      </nav>
+      <!-- END NAVBAR -->
+    </header>
+    <hr class='header-below'>
+    <!-- END HEADER -->
+
+
+    <div class="container">
+      <div class='notifications'>
+        <div id="sign-in-failure" class="alert alert-danger sign-in-alert-danger" role="alert">
+          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true">
+            <!----></span>
+          <span class="sr-only">Error:</span> The email or password you entered is incorrect.
+        </div>
+      </div>
+      <div class='home-view'>
+        <div class='hero'>
+        </div>
+        <div id='content' class='content'>
+          <div class='row-fluid'>
+            <div class='col-md-1'>
+            </div>
+            <div class='col-md-3 how-sft-works'>
+            </div>
+            <div class='col-md-3 how-sft-works'>
+              <h1>
+                Welcome to Sweaters for Turtles!
+              </h1>
+              <h2>
+                  Sign in or sign up to buy sweaters to make your turtle look fucking awesome.
+                </h2>
+            </div>
+            <div class='col-md-3 how-sft-works'>
+            </div>
+            <div class='col-md-1'>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div id=''>
+      </div> -->
+    </div>
+
+    <!-- START FOOTER -->
+    <footer>
+      <p>
+        &#169; 2016 Sweaters for Turtles
+      </p>
+    </footer>
+    <!-- END FOOTER -->
+  </div>
+</body>
+
 </html>

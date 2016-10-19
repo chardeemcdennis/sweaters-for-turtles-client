@@ -1,0 +1,34 @@
+<h2> Turtle Sweaters: </h2>
+{{#each products}}
+<div id=div{{_id}} class="col-md-5 product">
+  <img src="./assets/images/turtle-sweaters/{{image}}"
+       alt="./assets/images/turtle-sweaters/taco.jpg"
+       height="142"
+       width="192">
+  <h3>{{name}}</h3>
+  <!-- <p class="_id">
+  {{_id}}
+  </p> -->
+  <h4 id ="price">
+  ${{price}}
+  </h4>
+  <p class="description">
+  {{description}}
+  </p>
+  <form class="add-to-cart">
+    <fieldset>
+      <input class="input-number" type="number" name="quantity" min=1
+             placeholder=1>
+      <input type="text" name="name" style="display: none"
+             value="{{name}}">
+      <input type="number" name="price" style="display: none"
+             value="{{price}}">
+      <input type="text" name="product_id" style="display: none"
+             value="{{_id}}">
+      <input type="text" name="image" style="display: none"
+             value="{{image}}">
+      <input type="submit" value="Add to Cart">
+    </fieldset>
+  </form>
+</div>
+{{/each}}

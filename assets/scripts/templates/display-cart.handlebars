@@ -1,0 +1,45 @@
+<div class="cart">
+  <h2>Products in My Cart: </h2>
+
+  {{#each cart}}
+    <div class="col-md-6 productInCart">
+      <img src="./assets/images/turtle-sweaters/{{image}}"
+           alt="./assets/images/turtle-sweaters/taco.jpg"
+           height="122"
+           width="122">
+      <br>
+      <!-- <strong>Product Id: {{product_id}}</strong>
+      <br> -->
+      <strong>Name: {{name}}</strong>
+      <br>
+      <strong>Price: ${{price}}</strong>
+      <strong>  X  {{quantity}}</strong>
+      <br>
+      <br>
+      <br>
+      <!-- delete later -->
+    </div>
+
+  {{/each}}
+
+  <div class="totalAmount">
+  <h3>Total Amount: ${{cart.total}}</h3>
+  </div>
+
+  <div class="stripeCheckout">
+    <form action="/your-server-side-code" method="POST">
+      <script
+        src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+        data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+        data-amount="999"
+        data-name="Stripe.com"
+        data-description="Widget"
+        data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+        data-locale="auto"
+        data-zip-code="true">
+      </script>
+    </form>
+  </div>
+
+  <button class ="clearCartButton">Clear Cart</button>
+</div>
