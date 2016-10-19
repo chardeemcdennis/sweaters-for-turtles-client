@@ -13,7 +13,12 @@ const displayCartSuccess = (cart) => {
   $('#content').html(displayCart(cart));
 };
 
+const clearCartSuccess = () => {
+  $('#content').html("Your cart was emptied.");
+};
+
 module.exports = {
   displayCartSuccess,
   addToCartSuccess,
+  clearCartSuccess,
 };

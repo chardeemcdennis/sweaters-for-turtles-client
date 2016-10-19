@@ -1,12 +1,13 @@
 <h1> Cart Items: </h1>
 Products in My Cart:
 {{#each cart}}
-  <p>
-  <strong>Product Id:</strong>{{product}}
-  </p>
+  <div class="productsInCart">
+  <strong>Product Id: {{product}}</strong>
+</div>
 
 {{/each}}
 <h3>Total Amount:</h3>
+
 <form action="/your-server-side-code" method="POST">
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -19,3 +20,4 @@ Products in My Cart:
     data-zip-code="true">
   </script>
 </form>
+<button class ="clearCartButton">Clear Cart</button>

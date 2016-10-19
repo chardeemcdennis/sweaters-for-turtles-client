@@ -26,7 +26,18 @@ const displayCart = () => {
   });
 };
 
+const clearCart = () => {
+  return $.ajax({
+    url: app.host + '/clear-cart/' + app.user._id,
+    method: 'PATCH',
+    headers: {
+        Authorization: 'Token token=' + app.user.token,
+      },
+  });
+};
+
 module.exports = {
   addToCart,
-  displayCart
+  displayCart,
+  clearCart,
 };
