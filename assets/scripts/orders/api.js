@@ -18,12 +18,12 @@ const displayOrders = () => {
 const deleteOrder = (order_id) => {
   let data = order_id;
   return $.ajax({
-    url: app.host + '/orders/' + app.user._id,
+    url: app.host + '/user-orders/' + data,
     method: "DELETE",
     headers: {
       Authorization: 'Token token=' + app.user.token,
     },
-    data: {  "_id" : data }
+    data: {  "_id" : app.user._id }
   });
 };
 

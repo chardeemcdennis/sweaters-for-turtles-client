@@ -1,9 +1,11 @@
 <h1> Orders: </h1>
-<button id={{_id}} class="deleteOrder">Delete This Order</button>
 {{#each orders}}
 
   <div class="showOrder">
   <strong>Order Id:</strong>{{order}}
+  {{_id}}
+  <br>
+  {{total_amount}}
   <button id={{_id}} class="deleteOrder">Delete This Order</button>
 </div>
 
