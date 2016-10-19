@@ -45,8 +45,28 @@ a:hover {
 }
 
 .content {
-  padding: 50px, 100px;
+  padding: 50px 100px;
 }
+
+.product {
+  border: 1px solid $grey;
+  margin: 25px 40px;
+  padding: 0;
+}
+
+.image {
+  clear: both;
+  float: left;
+}
+
+// .h3 {
+//   float: right;
+// }
+
+// .price {
+//   float: right;
+// }
+
 
 .row-fluid {
   clear: both;

@@ -5,6 +5,7 @@ const displayProducts = require('../templates/display-products.handlebars');
 
 
 const displayProductsSuccess = (products) => {
+  $('.hero').hide();
   $('#content').html(displayProducts(products));
 };
 

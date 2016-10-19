@@ -27,7 +27,7 @@ const displayCartSuccess = (cart) => {
 
   // let cartTotal = cartTotalAmount(userCart);
   console.log('userCart is', userCart);
-
+  $('.hero').hide();
   $('#content').html(displayCart(cart));
 };
 

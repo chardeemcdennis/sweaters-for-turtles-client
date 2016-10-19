@@ -1,6 +1,10 @@
 <h2> Turtle Sweaters: </h2>
 {{#each products}}
-<div id=div{{_id}} class="product">
+<div id=div{{_id}} class="col-md-5 product">
+  <img src="./assets/images/turtle-sweaters/{{image}}"
+       alt="./assets/images/turtle-sweaters/taco.jpg"
+       height="142"
+       width="192">
   <h3>{{name}}</h3>
   <!-- <p class="_id">
   {{_id}}
@@ -26,9 +30,5 @@
       <input type="submit" value="Add to Cart">
     </fieldset>
   </form>
-  <img src="./assets/images/turtle-sweaters/{{image}}"
-       alt="./assets/images/turtle-sweaters/taco.jpg"
-       height="142"
-       width="142">
 </div>
 {{/each}}

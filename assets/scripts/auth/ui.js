@@ -42,6 +42,7 @@ const signOutSuccess = () => {
   app.user = null;
   $('#user-welcome').hide();
   $('#sign-in-prompt').show();
+  $('.hero').show();
 };
 
 const signOutFailure = (error) => {
