@@ -1,0 +1,8 @@
+Handlebars.registerHelper('total_amount', function(cart, options) {
+  let out = "<ul>";
+  for(let i=0, l=items.length; i<l; i++) {
+    out = out + "<li>" + options.fn(items[i]) + "</li>";
+  }
+
+  return out + "</ul>";
+});

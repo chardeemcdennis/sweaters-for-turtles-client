@@ -6,14 +6,13 @@ Products in My Cart:
          alt="./assets/images/turtle-sweaters/taco.jpg"
          height="62"
          width="62">
+    <br>
     <strong>Product Id: {{product_id}}</strong>
     <br>
     <strong>Name: {{name}}</strong>
     <br>
     <strong>Price: ${{price}}</strong>
-    <h3>  X  {{quantity}}</h3>
-    <br>
-    <strong> Total: {{price}}*{{quantity}} </strong>
+    <strong>  X  {{quantity}}</strong>
     <br>
     <br>
     <br>
@@ -23,7 +22,7 @@ Products in My Cart:
 {{/each}}
 
 <div class="totalAmount">
-<h3>Total Amount: {}</h3>
+<h3>Total Amount: ${{cart.total}}</h3>
 </div>
 
 <div class="stripeCheckout">
