@@ -12,18 +12,17 @@ Products in My Cart:
 </div>
 
 <div class="stripeCheckout">
-<form action="/your-server-side-code" method="POST">
+  <form action="/checkout" method="POST">
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
-    data-amount="999"
-    data-name="Stripe.com"
-    data-description="Widget"
+    data-key="pk_test_TmOEajfRUrzDTQ37AIJ1A7hp"
+    data-amount="2000"
+    data-name="Sweaters for Turtles"
+    data-description="2 widgets"
     data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-    data-locale="auto"
-    data-zip-code="true">
+    data-locale="auto">
   </script>
-</form>
+  </form>
 </div>
 
 <button class ="clearCartButton">Clear Cart</button>
