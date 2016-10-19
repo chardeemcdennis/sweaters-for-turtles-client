@@ -1,14 +1,29 @@
 <h1> Cart Items: </h1>
 Products in My Cart:
 {{#each cart}}
-  <div class="productsInCart">
-  <strong>Product Id: {{product}}</strong>
-</div>
+  <div class="productInCart">
+    <img src="./assets/images/turtle-sweaters/{{image}}"
+         alt="./assets/images/turtle-sweaters/taco.jpg"
+         height="62"
+         width="62">
+    <strong>Product Id: {{product_id}}</strong>
+    <br>
+    <strong>Name: {{name}}</strong>
+    <br>
+    <strong>Price: ${{price}}</strong>
+    <h3>  X  {{quantity}}</h3>
+    <br>
+    <strong> Total: {{price}}*{{quantity}} </strong>
+    <br>
+    <br>
+    <br>
+    <!-- delete later -->
+  </div>
 
 {{/each}}
 
 <div class="totalAmount">
-<h3>Total Amount: </h3>h3>
+<h3>Total Amount: {}</h3>
 </div>
 
 <div class="stripeCheckout">
