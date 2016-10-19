@@ -6,8 +6,12 @@ Products in My Cart:
 </div>
 
 {{/each}}
-<h3>Total Amount:</h3>
 
+<div class="totalAmount">
+<h3>Total Amount: </h3>h3>
+</div>
+
+<div class="stripeCheckout">
 <form action="/your-server-side-code" method="POST">
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -20,4 +24,6 @@ Products in My Cart:
     data-zip-code="true">
   </script>
 </form>
+</div>
+
 <button class ="clearCartButton">Clear Cart</button>
