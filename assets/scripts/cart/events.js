@@ -34,7 +34,7 @@ const onClearCart = (event) => {
 const addHandlers = () => {
   $('.content').on('submit', '.add-to-cart', onAddToCart);
   $('nav').on('click', '#get-cart', onDisplayCart);
-  $('.content').on('click', '.clearCartButton', onClearCart);
+  $('.content').on('click', '.clear-cart-button', onClearCart);
 };
 
 module.exports = {
