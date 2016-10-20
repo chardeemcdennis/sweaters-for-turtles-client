@@ -16,7 +16,6 @@ const cartTotalAmount = (userCart) => {
     runningTotal += (array[index].quantity * array[index].price);
   });
   console.log('running total is', runningTotal);
-  let totalAmount = Math.round(runningTotal * 100) / 100;
   return totalAmount;
 };
 
