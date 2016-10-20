@@ -5,6 +5,7 @@
 const displayOrders = require('../templates/order-history.handlebars');
 
 const displayOrdersSuccess = (orders) => {
+  $('.hero').hide();
   $('#content').html(displayOrders(orders));
 };
 

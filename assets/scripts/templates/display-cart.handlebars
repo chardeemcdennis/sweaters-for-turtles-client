@@ -1,27 +1,4 @@
 <div class="cart">
-  <h2>Products in My Cart: </h2>
-
-  {{#each cart}}
-    <div class="col-md-6 productInCart">
-      <img src="./assets/images/turtle-sweaters/{{image}}"
-           alt="./assets/images/turtle-sweaters/taco.jpg"
-           height="122"
-           width="122">
-      <br>
-      <!-- <strong>Product Id: {{product_id}}</strong>
-      <br> -->
-      <strong>Name: {{name}}</strong>
-      <br>
-      <strong>Price: ${{price}}</strong>
-      <strong>  X  {{quantity}}</strong>
-      <br>
-      <br>
-      <br>
-      <!-- delete later -->
-    </div>
-
-  {{/each}}
-
   <div class="checkout">
     <div class="totalAmount">
     <h3>Total Amount: ${{cart.total}}</h3>
@@ -67,4 +44,23 @@
     </div>
     <button class ="clear-cart-button">Clear Cart</button>
   </div>
+  <h2>Products in My Cart: </h2>
+
+  {{#each cart}}
+    <div class="col-md-8 product-in-cart">
+      <h4 class='float-right'>Name: {{name}}</h4>
+      <h4 class='float-right'>Price: ${{price}} X {{quantity}}</h4>
+      <br>
+      <img src="./assets/images/turtle-sweaters/{{image}}"
+           alt="./assets/images/turtle-sweaters/taco.jpg"
+           height="122"
+           width="122">
+      <br>
+      <br>
+      <br>
+      <!-- delete later -->
+    </div>
+
+  {{/each}}
+
 </div>
