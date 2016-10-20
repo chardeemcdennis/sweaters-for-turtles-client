@@ -10,6 +10,14 @@ Sweaters for Turtles Deployed API URL: https://sweaters-for-turtles.herokuapp.co
 Sweaters for Turtles API Repo: https://github.com/chardeemcdennis/sweaters-for-turtles-api
 Wireframes: https://drive.google.com/open?id=1SAZneLIHeK40NoRCgGA8dfvbajuaNJVntpxPNMavZQw
 
+## Using the Deployed Client
+The deployed client is a demo instance of the Sweaters for Turtles application. When you are using the app it will not create charges on your credit card, you should still not use real credit card information.
+We are using Stripe test cards for demos of the test instance, a full list is available here: https://stripe.com/docs/testing#cards
+For example:
+Number: 4242 4242 4242 4242
+Expiry: 12 / 17 | CVC: 123
+Zip Code: 12345
+
 ## Team story:
 In brainstorming ideas for the store/e-commerce setup for the Nozama project, Ben mentioned that he thought it would be interesting to have something similar to Regretzy, a site that listed the most ridiculous items from Etsy. Katie mentioned that there was a wonderful Etsy seller that offered sweaters for turtles. We found the image that she was talking about and it was so wonderful that we had to see if we could find more. In our search, we found so many wonderful sweaters that we absolutely had to make it happen! So, we launched directly into Sweaters for Turtles, a Nozama company.
 
