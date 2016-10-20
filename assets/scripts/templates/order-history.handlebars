@@ -6,6 +6,10 @@
   {{_id}}
   <br>
   {{total_amount}}
+  <br>
+  {{#each products}}
+    <p>{{name}}</p>
+  {{/each}}
   <button id={{_id}} class="deleteOrder">Delete This Order</button>
 </div>
 

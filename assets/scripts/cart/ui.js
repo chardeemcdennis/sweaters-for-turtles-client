@@ -1,6 +1,6 @@
 'use strict';
 
-// const app = require('../app');
+const app = require('../app');
 
 const displayCart = require('../templates/display-cart.handlebars');
 
@@ -12,10 +12,16 @@ const addToCartSuccess = () => {
 const cartTotalAmount = (userCart) => {
   let runningTotal = 0;
   userCart.forEach((element, index, array) => {
-    console.log('item number' + (index +  1) + "'s subtotal is", array[index].quantity * array[index].price);
+    // console.log('item number' + (index +  1) + "'s subtotal is", array[index].quantity * array[index].price);
     runningTotal += (array[index].quantity * array[index].price);
   });
+<<<<<<< HEAD
   console.log('running total is', runningTotal);
+=======
+  let totalAmount = Math.round(runningTotal * 100) / 100;
+  app.user.totalAmount = totalAmount;
+  // console.log('app.user.totalAmount', app.user.totalAmount);
+>>>>>>> stripe
   return totalAmount;
 };
 
@@ -26,7 +32,7 @@ const displayCartSuccess = (cart) => {
   userCart.total = cartTotalAmount(userCart);
 
   // let cartTotal = cartTotalAmount(userCart);
-  console.log('userCart is', userCart);
+  // console.log('userCart is', userCart);
   $('.hero').hide();
   $('#content').html(displayCart(cart));
 };
