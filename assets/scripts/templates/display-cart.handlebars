@@ -47,17 +47,16 @@
   <h2>Products in My Cart: </h2>
 
   {{#each cart}}
-    <div class="col-md-8 product-in-cart">
+    <div class="col-md-6 product-in-cart">
       <h4 class='float-right'>Name: {{name}}</h4>
-      <h4 class='float-right'>Price: ${{price}} X {{quantity}}</h4>
+      <h4 class='float-right'>Price: ${{price}}</h4>
+      <h4 class='float-right'>Quantity: {{quantity}}</h4>
       <br>
-      <img src="./assets/images/turtle-sweaters/{{image}}"
+      <img class='cart-image'
+           src="./assets/images/turtle-sweaters/{{image}}"
            alt="./assets/images/turtle-sweaters/taco.jpg"
-           height="122"
-           width="122">
-      <br>
-      <br>
-      <br>
+           height="140"
+           width="160">
       <!-- delete later -->
     </div>
 
