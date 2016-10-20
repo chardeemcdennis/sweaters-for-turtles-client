@@ -36,6 +36,7 @@ const displayCartSuccess = (cart) => {
 
 const clearCartSuccess = () => {
   $('#content').html("Your cart was emptied.");
+  app.user.cart = [];
 };
 
 module.exports = {

@@ -2,7 +2,10 @@
 
 const app = require('../app');
 const ordersAPI = require('../orders/api.js');
+const cartAPI = require('../cart/api.js');
 const ui = require('./ui.js');
+const cartUi = require('../cart/ui.js');
+const api = require('./api.js');
 // const cartAPI = require('../cart/api.js');
 
 // let stripe = require("stripe")("pk_test_TmOEajfRUrzDTQ37AIJ1A7hp");
@@ -46,12 +49,17 @@ const stripeResponseHandler = (status, response) => {
     newOrder.products = app.user.cart;
     newOrder.total_amount = app.user.totalAmount;
     newOrder.stripe_token = token;
+    // newOrder.currency =
     // let newOrderJson;
     // console.log('jsonified is', newOrderJson);
-    ordersAPI.createOrder(newOrder)
-      .done(ui.createOrderSuccess)
-      .fail(ui.createOrderFailure);
+    api.addStripeCharge(newOrder)
+      .done(ui.addStripeChargeSuccess, ordersAPI.createOrder(newOrder)
+          .done(ui.createOrderSuccess, cartAPI.clearCart)
+              .done(cartUi.clearCartSuccess)
+          .fail(ui.createOrderFailure))
+      .fail(ui.addStripeChargeFailure);
   }
+
 };
 
 const getStripeToken = (event) => {
@@ -77,14 +85,10 @@ const getStripeToken = (event) => {
 
   // Prevent the form from being submitted:
 
-  return false;
+  return true;
 };
 
-// const getCart = () => {
-//   cartAPI.displayCart()
-//     .done(getStripeToken);
-//   // console.log(data);
-// };
+
 
 
 const addHandlers = () => {

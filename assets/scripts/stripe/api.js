@@ -4,7 +4,7 @@ const app = require('../app.js');
 
 const addStripeCharge = (data) => {
     return $.ajax({
-      url: app.host + '/charge',
+      url: app.host + '/make-charge',
       method: "POST",
       headers: {
         Authorization: 'Token token=' + app.user.token,

@@ -36,7 +36,7 @@ const createOrder = (newOrder) => {
     headers: {
       Authorization: 'Token token=' + app.user.token,
     },
-    data: {cart: data}
+    data: data
   });
 };
 

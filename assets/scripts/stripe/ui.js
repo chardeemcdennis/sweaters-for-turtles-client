@@ -10,7 +10,19 @@ const createOrderFailure = () => {
 };
 
 
+const addStripeChargeSuccess = () => {
+  console.log("YESSSSSSSSSSSAAAAAAA");
+};
+
+
+const addStripeChargeFailure = () => {
+  console.log("FUUUUUUUUUUUUUAAAAAACCC");
+};
+
+
 module.exports = {
   createOrderSuccess,
   createOrderFailure,
+  addStripeChargeSuccess,
+  addStripeChargeFailure
 };
