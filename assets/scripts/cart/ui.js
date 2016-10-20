@@ -5,7 +5,7 @@ const app = require('../app');
 const displayCart = require('../templates/display-cart.handlebars');
 
 const addToCartSuccess = () => {
-  console.log("Add to cart successful");
+  // console.log("Add to cart successful");
   $('.notifications').html("Item added to cart");
   setTimeout(function(){$('.notifications').html('');}, 1350);
 };

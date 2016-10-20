@@ -42,7 +42,7 @@ const stripeResponseHandler = (status, response) => {
     let token = response.id;
     // Insert the token ID into the form so it gets submitted to the server:
     $form.append($('<input type="hidden" name="stripeToken">').val(token));
-    console.log('token is', token);
+    // console.log('token is', token);
     // Submit the form:
 
     let newOrder = {};
@@ -63,17 +63,10 @@ const stripeResponseHandler = (status, response) => {
 };
 
 const getStripeToken = (event) => {
-  // console.log(cart);
-  // console.log(app.cart);
-  console.log('app.user.totalAmount', app.user.totalAmount);
-  console.log('app.user.cart is', app.user.cart);
   event.preventDefault();
-  console.log('in getStripeToken');
 
   Stripe.setPublishableKey('pk_test_TmOEajfRUrzDTQ37AIJ1A7hp');
   // let $form = event.target;
-
-  console.log('event.target is', event.target);
 
   // Disable the submit button to prevent repeated clicks:
   let $form = $('#payment-form');
@@ -82,9 +75,7 @@ const getStripeToken = (event) => {
   // Request a token from Stripe:
   Stripe.card.createToken($form, stripeResponseHandler);
 
-
   // Prevent the form from being submitted:
-
   return true;
 };
 

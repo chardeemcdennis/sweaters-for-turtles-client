@@ -29,7 +29,7 @@ const deleteOrder = (order_id) => {
 
 const createOrder = (newOrder) => {
   let data = newOrder;
-  console.log('stripe token is', data.stripe_token);
+  // console.log('stripe token is', data.stripe_token);
   return $.ajax({
     url: app.host + '/order-create',
     method: 'POST',
