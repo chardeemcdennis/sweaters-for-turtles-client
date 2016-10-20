@@ -81,8 +81,17 @@ hr {
   clear: both;
   margin: 0;
   position: static;
+  width: 102%;
+}
+
+.order-hr {
+  clear: both;
+  margin: 0 0 5px;
+  position: static;
   width: 100%;
 }
+
+
 
 .container {
   padding: 0;
@@ -112,10 +121,25 @@ hr {
 .product-in-cart {
   clear: left;
   float: left;
+  margin: 5px 0;
+}
+
+.name,
+.price,
+.add-to-cart {
+  margin-right: 10px;
+}
+
+.description {
+  margin-bottom: 5px;
 }
 
 .image {
   float: left;
+}
+
+.cart-image {
+  margin-top: -19px;
 }
 
 .float-right {
@@ -123,14 +147,24 @@ hr {
   float: right;
 }
 
+.add-to-cart {
+  float: right;
+}
+
+.show-order {
+  clear: both;
+  margin: 5px;
+  padding: 5px;
+}
+
 .checkout {
   float: right;
+  margin-top: 45px;
 }
 
 .clear-cart-button {
   margin-top: 5px;
 }
-
 
 
 // STYLING FOR FOOTER AND ITS CONTENTS

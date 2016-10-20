@@ -1,15 +1,16 @@
 <h1> Order History: </h1>
 {{#each orders}}
 
-  <div class="showOrder">
+  <div class="col-sm-6 show-order">
   <strong>Order Id:</strong>{{order}}
   {{_id}}
-  <br>
-  <strong>Total Amount: ${{total_amount}}
-  <br>
+  <hr class="order-hr">
   {{#each products}}
     <p>{{name}}  x  {{quantity}}</p>
   {{/each}}
+  <hr class="order-hr">
+  <strong>Total Amount: ${{total_amount}}
+  <br>
   <button id={{_id}} class="deleteOrder">Delete This Order</button>
 </div>
 

@@ -45,13 +45,7 @@ a:hover {
 }
 
 .content {
-  padding: 50px 100px;
-}
-
-.product {
-  border: 1px solid $grey;
-  margin: 25px 40px;
-  padding: 0;
+  padding: 50px 17%;
 }
 
 .h4 {
@@ -63,11 +57,31 @@ a:hover {
   padding: 2px 0;
 }
 
+.product-in-cart {
+  border: 2px solid $charcoal;
+  border-radius: 2px;
+  padding: 0 10px 0 0;
+}
+
 .checkout {
   border: 3px solid $charcoal;
   border-radius: 5px;
   float: left;
   padding: 0 25px 15px;
+}
+
+.product {
+  background-color: $faint-charcoal;
+  border: 3px solid $grey;
+  height: 244;
+  margin: 15px 0;
+  padding: 0;
+}
+
+.show-order {
+  border: 2px solid $charcoal;
+  border-radius: 2px;
+  padding: 0 10px 0 0;
 }
 
 // .h3 {
@@ -88,9 +102,6 @@ a:hover {
   text-align: center;
 }
 
-.how-sft-works {
-  margin-top: 75px;
-}
 
 // Should break into class for new rounds, login and create profile
 
