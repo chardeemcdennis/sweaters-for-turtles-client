@@ -1611,7 +1611,7 @@ webpackJsonp([0],[
 	var displayCart = __webpack_require__(31);
 
 	var addToCartSuccess = function addToCartSuccess() {
-	  console.log("Add to cart successful");
+	  // console.log("Add to cart successful");
 	  $('.notifications').html("Item added to cart");
 	  setTimeout(function () {
 	    $('.notifications').html('');
@@ -1757,7 +1757,7 @@ webpackJsonp([0],[
 
 	var createOrder = function createOrder(newOrder) {
 	  var data = newOrder;
-	  console.log('stripe token is', data.stripe_token);
+	  // console.log('stripe token is', data.stripe_token);
 	  return $.ajax({
 	    url: app.host + '/order-create',
 	    method: 'POST',
@@ -2027,7 +2027,7 @@ webpackJsonp([0],[
 	    var token = response.id;
 	    // Insert the token ID into the form so it gets submitted to the server:
 	    $form.append($('<input type="hidden" name="stripeToken">').val(token));
-	    console.log('token is', token);
+	    // console.log('token is', token);
 	    // Submit the form:
 
 	    var newOrder = {};
@@ -2042,17 +2042,10 @@ webpackJsonp([0],[
 	};
 
 	var getStripeToken = function getStripeToken(event) {
-	  // console.log(cart);
-	  // console.log(app.cart);
-	  console.log('app.user.totalAmount', app.user.totalAmount);
-	  console.log('app.user.cart is', app.user.cart);
 	  event.preventDefault();
-	  console.log('in getStripeToken');
 
 	  Stripe.setPublishableKey('pk_test_TmOEajfRUrzDTQ37AIJ1A7hp');
 	  // let $form = event.target;
-
-	  console.log('event.target is', event.target);
 
 	  // Disable the submit button to prevent repeated clicks:
 	  var $form = $('#payment-form');
@@ -2062,7 +2055,6 @@ webpackJsonp([0],[
 	  Stripe.card.createToken($form, stripeResponseHandler);
 
 	  // Prevent the form from being submitted:
-
 	  return true;
 	};
 
@@ -2083,19 +2075,19 @@ webpackJsonp([0],[
 	'use strict';
 
 	var createOrderSuccess = function createOrderSuccess() {
-	  console.log("YESSSSSSSSS");
+	  // console.log("YESSSSSSSSS");
 	};
 
 	var createOrderFailure = function createOrderFailure() {
-	  console.log("FUUUUUUUUUUUUU");
+	  // console.log("FUUUUUUUUUUUUU");
 	};
 
 	var addStripeChargeSuccess = function addStripeChargeSuccess() {
-	  console.log("YESSSSSSSSSSSAAAAAAA");
+	  // console.log("YESSSSSSSSSSSAAAAAAA");
 	};
 
 	var addStripeChargeFailure = function addStripeChargeFailure() {
-	  console.log("FUUUUUUUUUUUUUAAAAAACCC");
+	  // console.log("FUUUUUUUUUUUUUAAAAAACCC");
 	};
 
 	module.exports = {
