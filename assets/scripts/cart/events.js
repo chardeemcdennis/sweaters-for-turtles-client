@@ -7,11 +7,6 @@ const getFormFields = require('../../../lib/get-form-fields.js');
 const onAddToCart = (event) => {
   event.preventDefault();
   let data = getFormFields(event.target);
-  console.log('getformfields data is', data);
-  // let data = document.getElementById("price");
-  // console.log(data);
-  // let price = data;
-  // console.log(price);
   api.addToCart(data)
     .done(ui.addToCartSuccess)
     .fail(ui.failure);

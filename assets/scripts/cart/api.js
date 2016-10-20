@@ -3,7 +3,6 @@
 const app = require('../app');
 
 const addToCart = (data) => {
-  console.log('app.user is', app.user);
   return $.ajax({
     url: app.host + '/cart-update/' + app.user._id,
     method: "PATCH",

@@ -9,7 +9,7 @@ const displayOrdersSuccess = (orders) => {
 };
 
 const deleteOrderSuccess = () => {
-  $('#content').html("The order was deleted.Please re-open the order history.");
+  $('#content').html("The order was deleted. Please re-open the order history.");
 };
 
 module.exports = {
