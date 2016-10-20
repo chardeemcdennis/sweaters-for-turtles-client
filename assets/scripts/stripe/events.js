@@ -55,7 +55,7 @@ const stripeResponseHandler = (status, response) => {
     api.addStripeCharge(newOrder)
       .done(ui.addStripeChargeSuccess, ordersAPI.createOrder(newOrder)
           .done(ui.createOrderSuccess, cartAPI.clearCart)
-              .done(cartUi.clearCartSuccess)
+              .done(cartUi.emptyCartSuccess)
           .fail(ui.createOrderFailure))
       .fail(ui.addStripeChargeFailure);
   }

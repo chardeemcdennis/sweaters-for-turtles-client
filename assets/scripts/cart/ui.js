@@ -7,6 +7,7 @@ const displayCart = require('../templates/display-cart.handlebars');
 const addToCartSuccess = () => {
   console.log("Add to cart successful");
   $('.notifications').html("Item added to cart");
+  setTimeout(function(){$('.notifications').html('');}, 1350);
 };
 
 const cartTotalAmount = (userCart) => {
@@ -24,14 +25,15 @@ const cartTotalAmount = (userCart) => {
 
 
 // rename cart WAAAYYYY later
-const displayCartSuccess = (cart) => {
-  let userCart = cart.cart;
+const displayCartSuccess = (user) => {
+  app.user.cart = user.cart;
+  let userCart = user.cart;
   userCart.total = cartTotalAmount(userCart);
 
   // let cartTotal = cartTotalAmount(userCart);
   // console.log('userCart is', userCart);
   $('.hero').hide();
-  $('#content').html(displayCart(cart));
+  $('#content').html(displayCart(user));
 };
 
 const clearCartSuccess = () => {
@@ -39,8 +41,14 @@ const clearCartSuccess = () => {
   app.user.cart = [];
 };
 
+const emptyCartSuccess = () => {
+  $('#content').html("<h1>Your order was successful!</h1><br><h2>Enjoy your sweaters</h2>");
+  app.user.cart = [];
+};
+
 module.exports = {
   displayCartSuccess,
   addToCartSuccess,
   clearCartSuccess,
+  emptyCartSuccess,
 };

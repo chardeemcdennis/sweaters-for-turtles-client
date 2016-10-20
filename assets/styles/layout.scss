@@ -109,6 +109,24 @@ hr {
   margin-top: 25vh;
 }
 
+.product-in-cart {
+  clear: left;
+  float: left;
+}
+
+.image {
+  float: left;
+}
+
+.float-right {
+  clear: right;
+  float: right;
+}
+
+.checkout {
+  float: right;
+}
+
 .clear-cart-button {
   margin-top: 5px;
 }
@@ -118,7 +136,7 @@ hr {
 // STYLING FOR FOOTER AND ITS CONTENTS
 footer {
   margin-bottom: 5px;
-  margin-top: 670px;
+  margin-top: 170px;
   text-align: center;
 }
 

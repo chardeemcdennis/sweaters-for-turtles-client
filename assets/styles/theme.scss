@@ -54,9 +54,13 @@ a:hover {
   padding: 0;
 }
 
-.image {
-  clear: both;
-  float: left;
+.h4 {
+  margin: 0;
+}
+
+.float-right {
+  margin: 0;
+  padding: 2px 0;
 }
 
 .checkout {
@@ -73,6 +77,10 @@ a:hover {
 // .price {
 //   float: right;
 // }
+
+.input-number {
+  width: 35px;
+}
 
 
 .row-fluid {
