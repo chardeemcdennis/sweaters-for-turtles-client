@@ -1,22 +1,22 @@
 'use strict';
 
 const createOrderSuccess = () => {
-  console.log("YESSSSSSSSS");
+  // console.log("YESSSSSSSSS");
 };
 
 
 const createOrderFailure = () => {
-  console.log("FUUUUUUUUUUUUU");
+  // console.log("FUUUUUUUUUUUUU");
 };
 
 
 const addStripeChargeSuccess = () => {
-  console.log("YESSSSSSSSSSSAAAAAAA");
+  // console.log("YESSSSSSSSSSSAAAAAAA");
 };
 
 
 const addStripeChargeFailure = () => {
-  console.log("FUUUUUUUUUUUUUAAAAAACCC");
+  // console.log("FUUUUUUUUUUUUUAAAAAACCC");
 };
 
 
