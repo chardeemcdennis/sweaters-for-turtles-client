@@ -2,6 +2,7 @@
 
 const app = require('../app');
 const signedIn = require('../templates/signed-in.handlebars');
+const signedOut = require('../templates/signed-out.handlebars');
 // const productsEvents = require('../products/events');
 
 
@@ -43,6 +44,8 @@ const signOutSuccess = () => {
   $('#user-welcome').hide();
   $('#sign-in-prompt').show();
   $('.hero').show();
+  $('nav').html('');
+  $('#content').html(signedOut());
 };
 
 const signOutFailure = (error) => {
